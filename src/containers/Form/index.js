@@ -4,6 +4,25 @@ import Field, { FIELD_TYPES } from "../../components/Field";
 import Select from "../../components/Select";
 import Button, { BUTTON_TYPES } from "../../components/Button";
 
+/* 
+  Ce composant `Form` représente un formulaire de contact dans l'application.
+  
+  Principaux éléments :
+  - `useState` et `useCallback` sont utilisés pour gérer l'état de l'envoi du formulaire (`sending`) et pour définir la fonction `sendContact` qui gère la soumission du formulaire.
+  - `mockContactApi` simule un appel asynchrone à une API de contact (dans cet exemple, une simple promesse avec un délai).
+  - Le formulaire comporte des champs (`Field`) pour le nom, prénom, type de contact, email, message, ainsi qu'un bouton d'envoi (`Button`).
+  - L'état `sending` est utilisé pour désactiver le bouton d'envoi pendant l'envoi du formulaire.
+  
+  Points à retenir :
+  - Lorsque le formulaire est soumis, `sendContact` est appelé pour déclencher l'appel simulé à l'API.
+  - `onSuccess` et `onError` sont des fonctions optionnelles pour gérer les cas de succès ou d'erreur lors de l'envoi du formulaire.
+  
+  Propriétés :
+  - `onError`: Fonction appelée en cas d'erreur lors de l'envoi du formulaire (par défaut, une fonction vide).
+  - `onSuccess`: Fonction appelée en cas de succès lors de l'envoi du formulaire (par défaut, une fonction vide).
+*/
+
+
 const mockContactApi = () => new Promise((resolve) => { setTimeout(resolve, 500); })
 
 const Form = ({ onSuccess, onError }) => {

@@ -4,6 +4,23 @@ import { getMonth } from "../../helpers/Date";
 
 import "./style.scss";
 
+/* 
+  Ce composant `Slider` est responsable d'afficher un carrousel d'événements en fonction des données fournies par le contexte `DataContext`.
+  
+  Principaux éléments :
+  - `useData`: Utilise le contexte `DataContext` pour accéder aux données des événements (`data`).
+  - `useState`: Gère l'état `index` pour suivre l'index de l'événement actuellement affiché dans le carrousel.
+  - `useEffect`: Utilisé pour déclencher le changement d'événement toutes les 5 secondes (`5000` ms).
+  
+  Points à retenir :
+  - Assure-toi que `data` contient les informations nécessaires sur les événements, notamment `focus` qui semble être une liste d'événements triés par date.
+  - Le carrousel (`Slider`) affiche les événements dans l'ordre décroissant de leur date.
+  - Vérifie que `getMonth` (probablement une fonction utilitaire) est correctement utilisée pour afficher le mois de l'événement.
+  - Les boutons de pagination (`radio-button`) permettent de sélectionner un événement spécifique dans le carrousel.
+  - Veille à ce que le changement automatique d'événement fonctionne comme prévu avec `setTimeout` et `useState`.
+*/
+
+
 const Slider = () => {
   const { data } = useData();
   const [index, setIndex] = useState(0);

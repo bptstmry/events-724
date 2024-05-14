@@ -7,6 +7,12 @@ import {
   useState,
 } from "react";
 
+/* 
+  Ce fichier définit le contexte `DataContext` qui gère les données partagées à travers l'application.
+  Il fournit également un `DataProvider` qui charge les données à partir de `api.loadData` et les rend disponibles via le contexte.
+  Le hook `useData` est exporté pour accéder facilement aux données du contexte dans d'autres composants.
+*/
+
 const DataContext = createContext({});
 
 export const api = {

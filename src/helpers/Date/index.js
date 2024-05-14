@@ -1,3 +1,12 @@
+/* 
+  Utilitaire `getMonth` qui retourne le nom du mois en français à partir d'une date.
+  
+  Fonctionnalités :
+  - Utilise un objet `MONTHS` qui mappe les numéros de mois aux noms correspondants en français.
+  - La fonction `getMonth` prend une instance de `Date` et retourne le nom du mois correspondant.
+*/
+
+
 export const MONTHS = {
   1: "janvier",
   2: "février",

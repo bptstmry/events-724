@@ -5,6 +5,30 @@ import PropTypes from "prop-types";
 
 import "./style.scss";
 
+/* 
+  Ce composant `Select` est utilisé pour afficher une liste déroulante personnalisée avec des options sélectionnables.
+  
+  Principaux éléments :
+  - `useState`: Gère l'état `value` pour suivre la valeur sélectionnée dans la liste déroulante, et `collapsed` pour contrôler l'état d'affichage des options.
+  - Le composant utilise des `props` pour définir les sélections (`selection`), les actions de changement (`onChange`), le nom (`name`), le titre vide (`titleEmpty`), le label (`label`), et le type de style (`type`).
+  - Lorsqu'une option est sélectionnée, `onChange` est appelé pour mettre à jour la valeur.
+  
+  Points à retenir :
+  - Assure-toi que `selection` est un tableau de chaînes représentant les options disponibles dans la liste déroulante.
+  - Les options peuvent être affichées ou cachées en fonction de l'état `collapsed`.
+  - Vérifie que `value` est correctement mis à jour lorsque l'utilisateur sélectionne une option.
+  - Les icônes SVG sont utilisées pour indiquer l'état de la liste déroulante (ouverte ou fermée).
+  
+  Propriétés :
+  - `selection`: Tableau des options de sélection.
+  - `onChange`: Fonction appelée lorsqu'une sélection est modifiée.
+  - `name`: Nom de l'élément de formulaire (optionnel).
+  - `titleEmpty`: Boolean indiquant si le titre vide est autorisé (par défaut `false`).
+  - `label`: Libellé associé à la liste déroulante (optionnel).
+  - `type`: Type de style de la liste déroulante (par défaut `"normal"`).
+*/
+
+
 const Select = ({
   selection,
   onChange,

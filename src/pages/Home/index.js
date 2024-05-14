@@ -12,6 +12,26 @@ import Form from "../../containers/Form";
 import Modal from "../../containers/Modal";
 import { useData } from "../../contexts/DataContext";
 
+/* 
+  Ce composant `Page` représente la page d'accueil de l'application.
+  Il intègre plusieurs composants pour afficher des fonctionnalités et des contenus spécifiques.
+  
+  Principaux éléments :
+  - `Menu`: Composant de menu de navigation.
+  - `Slider`: Composant pour afficher un carrousel d'images ou de contenus.
+  - `ServiceCard`: Composant pour afficher des cartes de présentation de services avec des descriptions.
+  - `EventList`: Composant pour afficher une liste d'événements.
+  - `PeopleCard`: Composant pour afficher des cartes de profil de membres de l'équipe.
+  - `Form`: Composant de formulaire de contact.
+  - `Modal`: Composant pour afficher des modales interactives.
+
+  Points à retenir :
+  - Assure-toi que les chemins des images (`imageSrc`) utilisés dans les composants sont corrects et accessibles.
+  - Vérifie que le contexte `DataContext` est correctement utilisé pour récupérer les données (`last`) nécessaires pour afficher la dernière prestation dans le pied de page.
+  - Veille à ce que les actions comme l'envoi de formulaires (`Form`) et l'interaction avec les modales (`Modal`) fonctionnent comme prévu.
+*/
+
+
 const Page = () => {
   const {last} = useData()
   return <>
