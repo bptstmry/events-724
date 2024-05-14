@@ -39,8 +39,9 @@ const Select = ({
 }) => {
   const [value, setValue] = useState();
   const [collapsed, setCollapsed] = useState(true);
+  // CORRECTION AJOUT DE "onChange(newValue)"
   const changeValue = (newValue) => {
-    onChange();
+    onChange(newValue);
     setValue(newValue);
     setCollapsed(newValue);
   };
