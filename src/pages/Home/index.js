@@ -146,6 +146,9 @@ const Page = () => {
     <footer className="row">
       <div className="col presta">
         <h3>Notre derniére prestation</h3>
+        {/* Failed prop type: The prop `imageSrc`/`title`is required */}
+        {/* Ajout de last */}
+        {last && (
         <EventCard
           imageSrc={last?.cover}
           title={last?.title}
@@ -153,6 +156,7 @@ const Page = () => {
           small
           label="boom"
         />
+      )}
       </div>
       <div className="col contact">
         <h3>Contactez-nous</h3>

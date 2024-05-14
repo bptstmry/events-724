@@ -30,7 +30,7 @@ const Slider = () => {
   // ** CORRECTION PAGE BLANCHE "-1"
   const nextCard = () => {
     setTimeout(
-      () => setIndex(index < byDateDesc.length-1 ? index + 1 : 0),
+      () => setIndex(index < byDateDesc.length - 1 ? index + 1 : 0),
       5000
     );
   };
@@ -62,7 +62,11 @@ const Slider = () => {
               {/* ** CORRECTION "checked={index === radioIdx}" (avant idx) */}
               {byDateDesc.map((_, radioIdx) => (
                 <input
-                  key={`${event.id}`}
+                  // ou provided a `checked` prop to a form field without an `onChange` handler.
+                  // This will render a read-only field. If the field should be mutable use `defaultChecked`.
+                  // Otherwise, set either `onChange` or `readOnly`.
+                  readOnly
+                  key={_.id}
                   type="radio"
                   name="radio-button"
                   checked={index === radioIdx}
