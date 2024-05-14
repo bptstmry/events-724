@@ -33,7 +33,17 @@ import { useData } from "../../contexts/DataContext";
 
 
 const Page = () => {
-  const {last} = useData()
+  // CORRECTION AJOUT DE "data" à la place de last
+  const { data } = useData();
+  // CORRECTION (utilisation de la variable last car nécéssité -> voir EventCard)
+  const last = data?.events?.length > 0
+  ? data.events.reduce((latest, current) => {
+      const latestDate = new Date(latest.date);
+      const currentDate = new Date(current.date);
+      return currentDate > latestDate ? current : latest;
+    })
+  : null;
+
   return <>
     <header>
       <Menu />
