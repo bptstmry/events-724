@@ -31,18 +31,17 @@ const Slider = () => {
       : [];
 
   // ** CORRECTION PAGE BLANCHE "-1"
+
   const nextCard = () => {
     setTimeout(
-      () => setIndex(index < byDateDesc.length- 1 ? index + 1 : 0),
+      () => setIndex(index < byDateDesc.length - 1 ? index + 1 : 0),
       5000
     );
   };
 
   useEffect(() => {
-    if (byDateDesc.length > 0) {
-      nextCard();
-    }
-  }, [byDateDesc]);
+    nextCard();
+  });
 
   return (
     <div className="SlideCardList">

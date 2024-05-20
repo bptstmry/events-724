@@ -6,6 +6,8 @@
   - La fonction `getMonth` prend une instance de `Date` et retourne le nom du mois correspondant.
 */
 
+// correction erreur dates
+
 
 export const MONTHS = {
   0: "janvier",
