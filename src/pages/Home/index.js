@@ -131,7 +131,7 @@ const Page = () => {
               <div>Message envoyé !</div>
               <p>
                 Merci pour votre message nous tâcherons de vous répondre dans
-                les plus brefs délais
+                les plus brefs délais.
               </p>
             </div>
           }
@@ -192,7 +192,7 @@ const Page = () => {
           Une agence événementielle propose des prestations de service
           spécialisées dans la conception et l&apos;organisation de divers événements
           tels que des événements festifs, des manifestations sportives et
-          culturelles, des événements professionnels
+          culturelles, des événements professionnels.
         </p>
       </div>
     </footer>
